@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stoplicht3</title>
+</head>
+<body background="kruising.png">
+    <form>
+    <h1>Stoplicht3.html</h1>
+    <p>Schalen en positioneren van het plaatje</p>
+    <p>Klik opp een knop om het stoplicht te veranderen</p>
+    <input type="button" value="rood" onclick="maakRood()">
+    <input type="button" value="groen" onclick="maakGroen()">
+    <input type="button" value="geel" onclick="maakGeel()">
+    <input type="button" value="uit" onclick="zetUit()">
+    <img id="stoplicht" src="stoplichtuit.jpg" width="20px" height="40px">
+    </form>
+
+    <script>
+        var stoplicht = document.getElementById('stoplicht');
+        stoplicht.style.position = 'absolute';
+        stoplicht.style.left = '715px';
+        stoplicht.style.top = '510px';
+
+        function maakRood(){
+            stoplicht.src = "stoplichtrood.jpg";
+        }
+        function maakGroen() {
+            stoplicht.src = "stoplichtgroen.jpg";
+        }
+        function maakGeel(){
+            stoplicht.src = "stoplichtgeel.jpg";
+        }
+        function zetUit(){
+            stoplicht.src = "stoplichtuit.jpg";
+        }
+    </script>
+</body>
+</html>
